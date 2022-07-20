@@ -2,22 +2,22 @@
 
 public class Accounts {
 	private int accno;
-	private static int saccno = 1000;
+	private static int saccno = 20354;
 	private String name;
-	private String city;
+	private String branchCity;
 	private int balance;
 	
 	public Accounts(String name, String city, int balance) {
 		this.name = name;
-		this.city = city;
+		this.branchCity = city;
 		this.balance = balance;
 		this.accno = saccno++;
-		//System.out.println("Account opened.. ||");
+		
 	}
 
 	@Override
 	public String toString() {
-		return "[accno=" + accno + ", name=" + name + ", city=" + city + ", balance=" + balance + "]";
+		return "[accno=" + accno + ", name=" + name + ", city=" + branchCity + ", balance=" + balance + "]";
 	}
 
 	public int getAccno() {
@@ -45,11 +45,11 @@ public class Accounts {
 	}
 
 	public String getCity() {
-		return city;
+		return branchCity;
 	}
 
 	public void setCity(String city) {
-		this.city = city;
+		this.branchCity = city;
 	}
 
 	public int getBal() {
