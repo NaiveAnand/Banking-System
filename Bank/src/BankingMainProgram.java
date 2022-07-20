@@ -177,7 +177,7 @@ public class BankingMainProgram {
 						e.printStackTrace();
 					}
 				
-					
+					System.out.println("Customers' Account Balance "+ac.getBal());
 					break;
 				}
 			}
@@ -218,7 +218,7 @@ public class BankingMainProgram {
 			break;
 			
 		default:	
-			System.out.println("*** Invalid Choice ");
+			System.out.println("*** Invalid Choice ***");
 			break;
 		}
 		
