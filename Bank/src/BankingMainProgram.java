@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.sql.*;
 
 //import oracle.jdbc.proxy.annotation.Methods;
 
@@ -52,10 +53,10 @@ public class BankingMainProgram {
 			amt=sc.nextInt();
 			Accounts acc=new Accounts(name,city,amt);
 			list.add(acc);
-			System.out.println("Accounts Opened Succesfully");
+			System.out.println("Account Opened Succesfully");
 			try {
 				Class.forName("oracle.jdbc.driver.OracleDriver");
-				String url="jdbc:oracle:thin:@localhost:1521:xe";
+				String url="jdbc:oracle:thin:@localhost:1521:XE";
 				String username="SYS";
 				String Password="Pandey@12345";
 						
