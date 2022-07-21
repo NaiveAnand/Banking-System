@@ -56,15 +56,15 @@ public class BankingMainProgram {
 			System.out.println("Account Opened Succesfully");
 			try {
 				Class.forName("oracle.jdbc.driver.OracleDriver");
-				String url="jdbc:oracle:thin:@localhost:1521:XE";
-				String username="SYS";
+				String url="jdbc:oracle:thin:@localhost:1521:xe";
+				String username="SYS as SYSDBA";
 				String Password="Pandey@12345";
 						
 				Connection con=DriverManager.getConnection(url,username,Password);
 				
 				Statement stmt=con.createStatement();
 				
-				String sql = "INSERT INTO Bank VALUES("+acc.getAccno()+",'"+acc.getName()+"','"+acc.getCity()+"',"+acc.getBal()+")";
+				String sql = "INSERT INTO BankingSystem4 VALUES("+acc.getAccno()+",'"+acc.getName()+"','"+acc.getCity()+"',"+acc.getBal()+")";
 				stmt.executeUpdate(sql);
 	     
 				
@@ -99,7 +99,7 @@ public class BankingMainProgram {
 					try {
 						Class.forName("oracle.jdbc.driver.OracleDriver");
 						String url="jdbc:oracle:thin:@localhost:1521:xe";
-						String username="SYS";
+						String username="SYS as SYSDBA";
 						String Password="Pandey@12345";
 								
 						Connection con=DriverManager.getConnection(url,username,Password);
@@ -157,7 +157,7 @@ public class BankingMainProgram {
 					try {
 						Class.forName("oracle.jdbc.driver.OracleDriver");
 						String url="jdbc:oracle:thin:@localhost:1521:xe";
-						String username="SYS";
+						String username="SYS as SYSDBA";
 						String Password="Pandey@12345";
 								
 						Connection con=DriverManager.getConnection(url,username,Password);
