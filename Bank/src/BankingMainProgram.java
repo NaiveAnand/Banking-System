@@ -106,7 +106,7 @@ public class BankingMainProgram {
 						
 						Statement stmt=con.createStatement();
 						
-						String sql = "UPDATE bank SET amt = '"+ac.getBal()+"'";
+						String sql = "UPDATE BankingSystem4 SET amount = '"+ac.getBal()+"' where accountNo = '"+ac.getAccno()+"'";
 						stmt.executeUpdate(sql);
 			     
 						
@@ -164,7 +164,7 @@ public class BankingMainProgram {
 						
 						Statement stmt=con.createStatement();
 						
-						String sql = "UPDATE bank SET amt = '"+ac.getBal()+"'";
+						String sql = "UPDATE BankingSystem4 SET amount = '"+ac.getBal()+"' where accountNo = '"+ac.getAccno()+"'";
 						stmt.executeUpdate(sql);
 			     
 						
